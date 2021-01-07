@@ -26,7 +26,7 @@ while True:
         continue
     
     # operator variable
-    operator = token[0]
+    operator = tokens[0]
     # num1 variable
     num1 = tokens[1]
     
@@ -38,9 +38,9 @@ while True:
     else:
         num2 = tokens[2]
 
-    
-    # if len(tokens) > 3:
-    #     num3 = tokens[3]
+    # if 3rd num provided
+    if len(tokens) > 3:
+        num3 = tokens[3]
 
     # A place to store the return value of the math function we call,
     # to give us one clear place where that result is printed.
@@ -56,7 +56,7 @@ while True:
 
     # (decide which math function to call based on first token)
     # if the first token is '+':
-    elif operator == "+":
+    if operator == "+":
         # call the add function with the other two tokens
         result = add(num1, num2)
 
