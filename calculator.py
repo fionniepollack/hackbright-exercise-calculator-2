@@ -9,18 +9,21 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
 # repeat forever:
 while True:
-#   read input
+    # read input
     user_input = input("What is your equation? ")
 
-#   tokenize input
-    tokens = user_input.split(',')
+    # tokenize input
+    tokens = user_input.split('.')
 
-#         if the first token is "q":
-        if token in tokens == "q":
-#           quit
-            print("Quit, you will now exit.")
-            
-#         else:
+    # if the first token is "q":
+    if "q" in tokens:
+        print("Quit, you will now exit.")
+        # quit          
+        break
+
+    # else:
+    else:
+
 #             (decide which math function to call based on first token)
 #             if the first token is '+':
 #                   call the add function with the other two tokens
